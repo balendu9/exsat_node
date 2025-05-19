@@ -30,11 +30,10 @@ Before getting started, ensure you have the following installed:
 Clone the Oracle Node repository and navigate to the project directory:
 
 ```bash
-git clone https://github.com/your-username/oracle-node.git
+git clone https://https://github.com/balendu9/exsat_node/tree/main
 cd oracle-node
 ```
 
-*Update the repository URL with your actual GitHub link.*
 
 ### Step 2: Install Dependencies
 
