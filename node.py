@@ -73,6 +73,8 @@ def register_as_oracle():
         return False
 
 
+
+
 async def fetch_price(session):
     url = "https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD&api_key=YOUR_API_KEY"
     try:
@@ -93,6 +95,7 @@ async def fetch_price(session):
 
 def current_timestamp():
     return int(time.time())
+
 
 def sign_price(symbol, price):
     if not PRIVATE_KEY:
@@ -129,8 +132,7 @@ async def send_data(node_id: str):
 
     print("[🔄] Starting oracle node...")
 
-    uri = "wss://exsat-aggregator.onrender.com/ws"
-
+    uri = "ws://localhost:8000/ws"
     async with websockets.connect(uri) as websocket:
         print(f"[Connected] Node {node_id}")
 
